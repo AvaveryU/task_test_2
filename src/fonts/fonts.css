@@ -1,0 +1,27 @@
+@font-face {
+  src: url("../fonts/Heebo-Black.ttf") format("opentype");
+  font-family: "Heebo";
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Heebo-Light.ttf") format("opentype");
+  font-family: "Heebo";
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Heebo-Regular.ttf") format("opentype");
+  font-family: "Heebo";
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Heebo-SemiBold.ttf") format("opentype");
+  font-family: "Heebo";
+  font-weight: 600;
+  font-display: swap;
+}

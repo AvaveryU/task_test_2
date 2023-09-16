@@ -1,0 +1,168 @@
+.ticket {
+  background-color: var(--primaryWhite);
+  border-radius: 10px;
+  border: 1px solid var(--primaryGrey);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.carrier {
+  padding: 35px 30px;
+  display: grid;
+  grid-template-rows: repeat(2, 80px);
+  gap: 10px;
+  border-right: 1px solid var(--primaryGrey);
+  box-sizing: border-box;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.button {
+  padding: 0;
+  border: 1px solid var(--primaryOrange);
+  border-radius: 10px;
+  background-color: var(--primaryDarkOrange);
+  color: white;
+  font-size: 22px;
+  line-height: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px var(--primaryDarkGrey);
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.info {
+  padding: 35px 30px;
+}
+
+.time {
+  font-size: 55px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.stops {
+  font-size: 18px;
+  color: var(--primaryGrey);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text {
+  margin: 0 auto;
+}
+
+.airplane {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  border-bottom: 1px solid var(--primaryGrey);
+  width: 100%;
+  margin-right: 5px;
+}
+
+.svg {
+  height: 100%;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.date {
+  color: var(--primaryGrey);
+}
+
+.common {
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 1380px) {
+  .carrier {
+    padding: 20px 15px;
+    grid-template-rows: repeat(2, 70px);
+  }
+
+  .button {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .info {
+    padding: 25px 20px;
+  }
+
+  .time {
+    font-size: 30px;
+    gap: 15px;
+  }
+
+  .stops {
+    font-size: 12px;
+  }
+
+  .text {
+    padding: 0 10px;
+  }
+
+  .airplane {
+    height: 15px;
+  }
+
+  .name,
+  .date {
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .ticket {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+  }
+
+  .carrier {
+    grid-row: 2 / -1;
+    border-top: 1px solid var(--primaryGrey);
+    border-right: 0;
+    padding: 20px;
+  }
+
+  .info {
+    grid-row: 1 / 2;
+    padding: 20px;
+  }
+
+  .text {
+    font-size: 8px;
+  }
+
+  .button {
+    max-width: 190px;
+    width: 100%;
+    justify-self: center;
+  }
+}

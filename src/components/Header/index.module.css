@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 200px;
+}
+.logo {
+  height: 100px;
+}
+
+.img {
+  object-fit: contain;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 10px var(--primaryDarkGrey);
+}
