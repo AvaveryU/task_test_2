@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f0b2f5b2.css",
+    "main.js": "/static/js/main.fa2e93c3.js",
+    "static/media/Heebo-Black.ttf": "/static/media/Heebo-Black.98dd262891719b8b4276.ttf",
+    "static/media/Heebo-SemiBold.ttf": "/static/media/Heebo-SemiBold.575d913cf7b76c7fa41c.ttf",
+    "static/media/Heebo-Light.ttf": "/static/media/Heebo-Light.81b8083bf3a45d2b5559.ttf",
+    "static/media/Heebo-Regular.ttf": "/static/media/Heebo-Regular.4dbbe613d25d93d40f37.ttf",
+    "static/media/logo.png": "/static/media/logo.98e3b899ccf3a1ee20e5.png",
+    "index.html": "/index.html",
+    "main.f0b2f5b2.css.map": "/static/css/main.f0b2f5b2.css.map",
+    "main.fa2e93c3.js.map": "/static/js/main.fa2e93c3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0b2f5b2.css",
+    "static/js/main.fa2e93c3.js"
+  ]
+}
