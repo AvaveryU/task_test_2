@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/task_test_2/static/css/main.1226ed8b.css",
-    "main.js": "/task_test_2/static/js/main.9829ca97.js",
+    "main.css": "/task_test_2/static/css/main.e005573f.css",
+    "main.js": "/task_test_2/static/js/main.0da2989d.js",
     "static/media/Heebo-Black.ttf": "/task_test_2/static/media/Heebo-Black.98dd262891719b8b4276.ttf",
     "static/media/Heebo-SemiBold.ttf": "/task_test_2/static/media/Heebo-SemiBold.575d913cf7b76c7fa41c.ttf",
     "static/media/Heebo-Light.ttf": "/task_test_2/static/media/Heebo-Light.81b8083bf3a45d2b5559.ttf",
     "static/media/Heebo-Regular.ttf": "/task_test_2/static/media/Heebo-Regular.4dbbe613d25d93d40f37.ttf",
     "static/media/logo.png": "/task_test_2/static/media/logo.98e3b899ccf3a1ee20e5.png",
     "index.html": "/task_test_2/index.html",
-    "main.1226ed8b.css.map": "/task_test_2/static/css/main.1226ed8b.css.map",
-    "main.9829ca97.js.map": "/task_test_2/static/js/main.9829ca97.js.map"
+    "main.e005573f.css.map": "/task_test_2/static/css/main.e005573f.css.map",
+    "main.0da2989d.js.map": "/task_test_2/static/js/main.0da2989d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1226ed8b.css",
-    "static/js/main.9829ca97.js"
+    "static/css/main.e005573f.css",
+    "static/js/main.0da2989d.js"
   ]
 }
