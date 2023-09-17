@@ -134,10 +134,10 @@
 
 .checkbox:hover {
   background-color: rgba(68, 205, 255, 0.099);
+}
 
-  .text {
-    opacity: 1;
-  }
+.checkbox:hover .text {
+  opacity: 1;
 }
 
 .text {
