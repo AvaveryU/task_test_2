@@ -3,8 +3,9 @@ import { ITicket } from './interfaces';
 import { allStops } from './constants';
 require('moment/locale/ru');
 
-export function getFormatPrice(value: number): string {
-    const num = value.toString();
+export function getFormatPrice(value: number, currency: number): string {
+    const sumWithCurrency = Math.floor(value / currency);
+    const num = sumWithCurrency.toString();
     let numberWithSpace = '';
     for (let i = 0; i < num.length; i++) {
         if ((num.length - i) % 3 === 0 && i !== 0) {

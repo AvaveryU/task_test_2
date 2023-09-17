@@ -2,26 +2,30 @@
   display: grid;
   grid-template-areas: "info tickets";
   grid-template-columns: 1fr 3fr;
-  grid-auto-rows: 1fr;
   gap: 20px;
 }
 
 .info {
+  -ms-grid-area: info;
   grid-area: info;
-  background-color: var(--primaryWhite);
+  background-color: rgb(254, 254, 254);
   border-radius: 10px;
-  border: 1px solid var(--primaryGrey);
+  border: 1px solid rgba(128, 128, 128, 0.473);
   box-sizing: border-box;
   height: max-content;
   padding: 20px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 15px;
   user-select: none;
 }
 
 .tickets {
+  -ms-grid-area: tickets;
   grid-area: tickets;
+  -ms-display: grid;
   display: grid;
   gap: 20px;
   align-items: start;
@@ -39,37 +43,39 @@
 
 .button {
   background-color: transparent;
-  border: 1px solid var(--primaryBlue);
+  border: 1px solid rgb(97, 175, 243);
   box-sizing: border-box;
   transition: all 0.3s ease;
   padding: 10px 0;
-  color: var(--primaryBlue);
+  color: rgb(97, 175, 243);
   font-weight: 600;
+}
 
-  &:nth-of-type(1) {
-    border-radius: 10px 0 0 10px;
-  }
+.button:nth-of-type(1) {
+  border-radius: 10px 0 0 10px;
+}
 
-  &:nth-last-of-type(1) {
-    border-radius: 0 10px 10px 0;
-  }
+.button:last-of-type {
+  border-radius: 0 10px 10px 0;
+}
 
-  &:hover {
-    cursor: pointer;
-  }
+.button:hover {
+  cursor: pointer;
+}
 
-  &:not(.button__active):hover {
-    background-color: var(--primaryDarkBlue);
-  }
+.button:not(.button__active):hover {
+  background-color: rgba(97, 175, 243, 0.102);
 }
 
 .button__active {
-  background-color: var(--secondaryBlue);
-  color: var(--primaryWhite);
+  background-color: rgb(45, 152, 246);
+  color: rgb(254, 254, 254);
 }
 
 .stops {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -78,6 +84,7 @@
   width: calc(100% + 40px);
   padding: 5px 0;
   position: relative;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   margin-left: -20px;
@@ -96,7 +103,7 @@
 
 .label {
   font-size: 16px;
-  color: var(--primaryDarkGrey);
+  color: rgb(99, 99, 99);
   cursor: pointer;
   margin-left: 30px;
 }
@@ -105,7 +112,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  border: 2px solid var(--primaryGrey);
+  border: 2px solid rgba(128, 128, 128, 0.473);
   border-radius: 3px;
   box-sizing: border-box;
   position: absolute;
@@ -116,8 +123,8 @@
 }
 
 .input:checked + .label::before {
-  background-color: var(--primaryDarkBlue);
-  border-color: var(--primaryBlue);
+  background-color: rgba(97, 175, 243, 0.102);
+  border-color: rgb(97, 175, 243);
   background-image: url("https://ouch-cdn2.icons8.com/h55WfTYUMH0s0NqleGr65Vmgixvy5RSBKpyyE5owXDM/rs:fit:641:456/extend:false/wm:1:re:0:0:0.8/wmid:ouch/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNDk3/L2Y2YzRhYjFmLTgw/YTgtNGY1Yy1iNjk0/LWVkOGY5MTJiMWY3/YS5zdmc.png");
   background-size: 9px 7px;
   background-repeat: no-repeat;
@@ -126,7 +133,7 @@
 }
 
 .checkbox:hover {
-  background-color: var(--secondaryDarkBlue);
+  background-color: rgba(68, 205, 255, 0.099);
 
   .text {
     opacity: 1;
@@ -137,7 +144,7 @@
   opacity: 0;
   font-size: 12px;
   font-weight: 600;
-  color: var(--primaryBlue);
+  color: rgb(97, 175, 243);
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -157,5 +164,27 @@
 
   .currencies {
     max-width: 300px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .content {
+    margin-top: 30px;
+    display: -ms-flexbox;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .info {
+    margin-top: 20px;
+  }
+  .title,
+  .currencies {
+    margin-bottom: 10px;
+  }
+  .button {
+    padding: 10px 25px;
+  }
+  .button:not(.button__active) {
+    background-color: rgb(254, 254, 254);
   }
 }

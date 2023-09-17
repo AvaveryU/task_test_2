@@ -1,7 +1,7 @@
 .ticket {
-  background-color: var(--primaryWhite);
+  background-color: rgb(254, 254, 254);
   border-radius: 10px;
-  border: 1px solid var(--primaryGrey);
+  border: 1px solid rgba(128, 128, 128, 0.473);
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -12,7 +12,7 @@
   display: grid;
   grid-template-rows: repeat(2, 80px);
   gap: 10px;
-  border-right: 1px solid var(--primaryGrey);
+  border-right: 1px solid rgba(128, 128, 128, 0.473);
   box-sizing: border-box;
 }
 
@@ -24,19 +24,19 @@
 
 .button {
   padding: 0;
-  border: 1px solid var(--primaryOrange);
+  border: 1px solid rgb(237, 99, 0);
   border-radius: 10px;
-  background-color: var(--primaryDarkOrange);
+  background-color: rgb(255, 106, 0);
   color: white;
   font-size: 22px;
   line-height: 30px;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px var(--primaryDarkGrey);
+  box-shadow: 0 1px 3px rgb(99, 99, 99);
+}
 
-  &:hover {
-    opacity: 0.8;
-    cursor: pointer;
-  }
+.button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .info {
@@ -46,6 +46,7 @@
 .time {
   font-size: 55px;
   font-weight: 400;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +55,8 @@
 
 .stops {
   font-size: 18px;
-  color: var(--primaryGrey);
+  color: rgba(128, 128, 128, 0.473);
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -66,13 +68,14 @@
 
 .airplane {
   height: 20px;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .line {
-  border-bottom: 1px solid var(--primaryGrey);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.473);
   width: 100%;
   margin-right: 5px;
 }
@@ -82,7 +85,9 @@
 }
 
 .block {
+  -ms-display: grid;
   display: grid;
+  -ms-grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   column-gap: 10px;
 }
@@ -92,7 +97,7 @@
 }
 
 .date {
-  color: var(--primaryGrey);
+  color: rgba(128, 128, 128, 0.473);
 }
 
 .common {
@@ -102,6 +107,7 @@
 @media screen and (max-width: 1380px) {
   .carrier {
     padding: 20px 15px;
+    -ms-grid-template-rows: repeat(2, 70px);
     grid-template-rows: repeat(2, 70px);
   }
 
@@ -140,18 +146,24 @@
 
 @media screen and (max-width: 570px) {
   .ticket {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: repeat(2, max-content);
     grid-template-rows: repeat(2, max-content);
   }
 
   .carrier {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: -1;
     grid-row: 2 / -1;
-    border-top: 1px solid var(--primaryGrey);
+    border-top: 1px solid rgba(128, 128, 128, 0.473);
     border-right: 0;
     padding: 20px;
   }
 
   .info {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1 / 2;
     padding: 20px;
   }
@@ -164,5 +176,51 @@
     max-width: 190px;
     width: 100%;
     justify-self: center;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ticket {
+    display: -ms-flexbox;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .carrier {
+    width: calc((100% - 20px) / 3);
+    display: -ms-flexbox;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info {
+    width: 70%;
+  }
+  .departure_time {
+    margin-right: 20px;
+  }
+  .arrival_time {
+    margin-left: 20px;
+  }
+  .stops {
+    text-align: center;
+  }
+  .button {
+    margin-top: 10px;
+    width: 100%;
+    height: 50%;
+  }
+  .img {
+    height: 50%;
+  }
+  .block {
+    display: -ms-flexbox;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .name,
+  .date {
+    width: 50%;
+  }
+  .common {
+    text-align: right;
   }
 }
