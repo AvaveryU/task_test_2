@@ -1,5 +1,7 @@
 # Приложение по поиску авиабилетов
 
+Ссылка на [GH-Pages](https://avaveryu.github.io/task_test_2/)
+
 ## Available Scripts
 
 In the project directory, you can run:
